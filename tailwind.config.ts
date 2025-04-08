@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,28 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				blue: {
+          100: '#E6F0FF',
+          200: '#BDDAFF',
+          300: '#94C4FF',
+          400: '#6BAEFF',
+          500: '#4298FF',
+          600: '#1A82FF',
+          700: '#0066E6',
+          800: '#004DB3',
+          900: '#003380',
+        },
+        coral: {
+          100: '#FFF0EE',
+          200: '#FFD6D0',
+          300: '#FFBCB3',
+          400: '#FFA295',
+          500: '#FF8878',
+          600: '#FF6E5A',
+          700: '#FF543D',
+          800: '#FF3A1F',
+          900: '#FF2001',
+        },
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +97,24 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				slideUp: {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				fadeIn: 'fadeIn 0.5s ease-out',
+				slideUp: 'slideUp 0.5s ease-out',
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
 			}
 		}
 	},
